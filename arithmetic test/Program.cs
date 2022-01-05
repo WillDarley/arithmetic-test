@@ -10,6 +10,7 @@ namespace arithmetic_test
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("welcome to the arithmetic test");
         }
     }
 }
