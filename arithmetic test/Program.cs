@@ -12,39 +12,68 @@ namespace arithmetic_test
         {
             Console.WriteLine("welcome to the arithmetic test");
 
-            // creates a random operator
+            Console.WriteLine("what is your name?");
+            string name = Console.ReadLine();
 
-            var rnd = new Random();
+            int totalscore = 0;
 
-            var operation = rnd.Next(1, 5);
-            var number1 = rnd.Next(1, 100);
-            var number2 = rnd.Next(1, 100);
-            int answer;
-            string operatorString;
-
-            switch (operation)
+            for (int i = 0; i < 10; i++)
             {
-                case 1:
-                    answer = number1 + number2;
-                    operatorString = "+";
-                    break;
-                case 2:
-                    answer = number1 - number2;
-                    operatorString = "-";
-                    break;
-                case 3:
-                    answer = number1 * number2;
-                    operatorString = "*";
-                    break;
-                case 4:
-                    answer = number1 / number2;
-                    operatorString = "/";
-                    break;
-                default:
-                    answer = 0;
-                    operatorString = "?";
-                    break;
+                // creates a random operator
+
+                var rnd = new Random();
+
+                var operation = rnd.Next(1, 5);
+                var number1 = rnd.Next(1, 100);
+                var number2 = rnd.Next(1, 100);
+                int answer;
+                string operatorString;
+
+
+                switch (operation)
+                {
+                    case 1:
+                        answer = number1 + number2;
+                        operatorString = "+";
+                        break;
+                    case 2:
+                        answer = number1 - number2;
+                        operatorString = "-";
+                        break;
+                    case 3:
+                        answer = number1 * number2;
+                        operatorString = "*";
+                        break;
+                    case 4:
+                        answer = number1 / number2;
+                        operatorString = "/";
+                        break;
+                    default:
+                        answer = 0;
+                        operatorString = "?";
+                        break;
+
+
+                }
+
+                Console.WriteLine($"what is the answer to {number1} {operatorString} {number2}?");
+                int answerGiven = int.Parse(Console.ReadLine());
+
+                if (answerGiven == answer)
+                {
+                    Console.WriteLine("correct");
+                    totalscore++;
+                }
+                else
+                {
+                    Console.WriteLine("incorrect");
+                }  
             }
-            
+            Console.WriteLine( );
+            Console.WriteLine("your total score out of 10 is " + totalscore);
+
+
+            Console.ReadLine();
+        }    
     }
 }
