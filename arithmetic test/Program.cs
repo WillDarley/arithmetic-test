@@ -10,7 +10,7 @@ namespace arithmetic_test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("welcome to the arithmetic test");
+            Console.WriteLine("welcome to the arithmetic test, your decimals should be rounded to the nearest whole number");
 
             Console.WriteLine("what is your name?");
             string name = Console.ReadLine();
