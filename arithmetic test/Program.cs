@@ -74,6 +74,8 @@ namespace arithmetic_test
 
 
             Console.ReadLine();
+
+            // i could not work any of these out :(
         }    
     }
 }
